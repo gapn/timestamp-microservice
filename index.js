@@ -30,7 +30,7 @@ app.get("/api/:date", (req, res) => {
   const dateString = req.params.date;
   let date;
 
-  if (/^\+$/.test(dateString)) {
+  if (/^\d+$/.test(dateString)) {
     date = new Date(parseInt(dateString))
   } else {
     date = new Date(dateString)
